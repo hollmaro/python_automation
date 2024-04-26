@@ -17,7 +17,7 @@ class LoggedInSuccessPage(BasePage):
         super().__init__(driver)
 
     def get_title_text(self):
-        return self.driver.find_element(*self.title_text).text
+        return self.get_element_text(self.title_text).text
 
     def open_logged_in_success_page(self):
         self.open_page(self.login_url)

@@ -19,5 +19,15 @@ class TestLogin(BaseTest):
                  .enterUserCred('student', 'Password123')
                  .clickOnSubmit()
                  .get_title_text())
-        time.sleep(5)
+        time.sleep(5)  # для цілей демонстрації
         assert "Logged In Successfully" in title
+
+    # def test_login_negative_username(self, driver_init):
+    #     login_p = LoginPage(driver_init)
+    #     (login_p
+    #      .open_login_page()
+    #      .enterUserCred('student123', 'Password123')
+    #      .clickOnSubmit())
+    #     error_message = login_p.get_username_invalid_text()
+    #     time.sleep(2)  # для цілей демонстрації
+    #     assert "Your username is invalid!" in error_message
